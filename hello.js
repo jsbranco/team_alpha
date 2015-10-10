@@ -5,7 +5,12 @@ if (Meteor.isClient) {
 
   Template.hello.helpers({
     locations: function() {
-      return Locations.find({});
+      return Locations.find({$near: {
+        $geometry: {
+          type: "Point",
+          coordinates: [114.109497, 22.39642]
+        }
+      }});
     },
     counter: function () {
       return Session.get('counter');

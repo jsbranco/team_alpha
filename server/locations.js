@@ -1,3 +1,8 @@
+Locations = new Meteor.Collection("locations");
+Meteor.publish("locations", function() {
+  return Locations.find({userId: Meteor.userId()});
+});
+
 function getLongLatForAddress (address, callback) {
   var result = HTTP.call(
     "GET",
@@ -49,16 +54,29 @@ Meteor.methods({
     });
 
     if (point !== null) {
-      var userLocations = Meteor.user().profile.locations;
+      /*var userLocations = Meteor.user().profile.locations;
       userLocations.push({
         name: name,
         address: formattedAddress,
-        longitude: point.lng,
-        latitude: point.lat,
+        loc: {
+          type: "Point",
+          coordinates: [point.lng, point.lat]
+        },
         tags: tags
       });
 
-      Meteor.users.update({_id: this.userId}, {$set: {"profile.locations": userLocations}});
+      Meteor.users.update({_id: this.userId}, {$set: {"profile.locations": userLocations}});*/
+
+      Locations.insert({
+        name: name,
+        address: formattedAddress,
+        loc: {
+          type: "Point",
+          coordinates: [point.lng, point.lat]
+        },
+        tags: tags,
+        userId: this.userId
+      });
 
       returnJSON = {message: "Location added!", status: "success"};
     } else {
