@@ -56,9 +56,9 @@ Meteor.methods({
 
       Meteor.users.update({_id: this.userId}, {$set: {"profile.locations": userLocations}});
 
-      returnJSON = {error: null, result: "Location added!"};
+      returnJSON = {message: "Location added!", status: "success"};
     } else {
-      returnJSON = {error: "An unknown error has occured.....", result: "failure"};
+      returnJSON = {message: "An unknown error has occured.....", status: "failure"};
     }
 
     return returnJSON;
