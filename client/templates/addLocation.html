@@ -1,0 +1,9 @@
+<template name="addLocation">
+  <p>{{currentUser.username}}</p>
+
+  {{#each currentUser.profile.locations}}
+    <p>{{name}}</p>
+  {{/each}}
+
+  <button class="addLocationButton">Add Location</button>
+</template>

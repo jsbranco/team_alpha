@@ -3,19 +3,6 @@ if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
 
-  Meteor.call("addLocation",
-    "Eiffel Tower",
-    "Champ de Mars, 5 Avenue Anatole France, 75007 Paris, France",
-    ["Monuments", "Tall"],
-    function(error, result) {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log(result);
-      }
-    }
-  );
-
   Template.hello.helpers({
     locations: function() {
       return Locations.find({});
