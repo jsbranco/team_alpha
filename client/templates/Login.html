@@ -1,0 +1,21 @@
+<template name="login">
+    {{#if currentUser}}
+        Welcome {{username}}
+    {{/if}}
+    <h3>Login</h3>
+    {{#if loginMessage}}
+        {{loginMessage}}
+    {{/if}}
+    <form id="loginForm" action="action">
+        <div>
+            <label>Login</label>
+            <input type="email" id="email"/>
+            <br>
+            <label>Password</label>
+            <input type="password" id="password"/>
+            <br>
+            <input type="submit" id="login-button" value="Sign in"/>
+            <br>
+        </div>
+    </form>
+</template>
