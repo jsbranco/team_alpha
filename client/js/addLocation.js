@@ -2,16 +2,25 @@ Template.addLocation.events({
   "click .addLocationButton": function() {
     console.log("adding location");
     Meteor.call("addLocation",
-      "Google Inc.",
-      "1600 Amphitheatre Parkway, Mountain View, CA 94043",
+      "Apple",
+      "1 Infinite Loop Cupertino, CA",
       ["Technology", "Coolness"],
       function(error, result) {
-        if (error) {
+        if(error) {
           console.log(error);
         } else {
           console.log(result);
         }
       }
     );
+  },
+  "click .getTripRecommendation": function() {
+    Meteor.call("getTripRecommendation", function(error, result) {
+      if(error) {
+        console.log(error);
+      } else {
+        console.log(result);
+      }
+    });
   }
 });
