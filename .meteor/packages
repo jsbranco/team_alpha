@@ -25,3 +25,7 @@ themeteorchef:jquery-validation
 accounts-base
 http
 check
+gfk:notifications
+gfk:server-messages
+accounts-facebook
+service-configuration
