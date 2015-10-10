@@ -42,13 +42,11 @@ Template.register.events({
         // Trim and validate the input
         var options = {
             username:tpl.find("#username").value,
-            emails: [{
-                address: tpl.find('#email').value,
-                verified: false
-            }],
+            email:  tpl.find('#email').value,
             password: tpl.find('#password').value,
             profile: {
-                fullName: tpl.find('#fullName').value
+                fullName: tpl.find('#fullName').value,
+                locations:[]
             }
         };
 
