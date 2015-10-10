@@ -31,7 +31,7 @@ Template.register.events({
 });
 
 function sanitizeEmail(email) {
-    return email.replace(/\s/g, "")
+    return email.replace(/\s/g, "");
 }
 function validatePassword(password) {
 
