@@ -32,6 +32,7 @@ email@1.0.7
 es5-shim@4.1.13
 facebook@1.2.2
 fastclick@1.0.7
+fortawesome:fontawesome@4.4.0
 geojson-utils@1.0.4
 gfk:notifications@1.1.4
 gfk:server-messages@1.1.0
@@ -88,6 +89,7 @@ templating@1.1.4
 templating-tools@1.0.0
 themeteorchef:jquery-validation@1.14.0
 tracker@1.0.9
+twbs:bootstrap@3.3.5
 ui@1.0.8
 underscore@1.0.4
 url@1.0.5

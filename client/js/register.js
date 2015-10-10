@@ -1,5 +1,5 @@
 Template.register.events({
-    'submit #registerForm': function (e, tpl) {
+    'click #create-account': function (e, tpl) {
         // Trim and validate the input
         var username = tpl.find("#username").value,
             email = tpl.find('#email').value,

@@ -1,19 +1,29 @@
 <template name="register">
-    <form id="registerForm" action="action">
-        <div>
-            <label>Full Name:</label>
-            <input type="text" id="fullName" />
-            <br>
-            <label>Username:</label>
-            <input type="text" id="username" />
-            <br>
-            <label>Email:</label>
-            <input type="email" id="email" />
-            <br>
-            <label>Password</label>
-            <input type="password" id="password" />
-            <br>
-            <input type="submit" id="create-account" value="Create an Account" />
+    <div class="map-bg">
+        <div class="blur-bg">
+            <div class="container">
+                <div class="registration-form">
+                    <h3 class="text-center">Create Account</h3>
+
+                    <form id="registerForm" action="action">
+                        <div>
+                            <input type="text" id="fullName" class="form-control" placeholder="Full Name">
+                            <input type="text" id="username" class="form-control" placeholder="Username">
+                            <input type="email" id="email" class="form-control" placeholder="Email">
+                            <input type="password" id="password" class="form-control" placeholder="Password">
+                            <button type="submit" class="btn btn-primary btn-block" id="create-account"> Create
+                                Account
+                            </button>
+                        </div>
+                        <hr>
+                        <p class="text-center">OR</p>
+                        <hr>
+                        <div class="text-center">
+                            <button class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </form>
+    </div>
 </template>

@@ -2,9 +2,9 @@ Template.addLocation.events({
   "click .addLocationButton": function() {
     console.log("adding location");
     Meteor.call("addLocation",
-      "Apple",
-      "1 Infinite Loop, Cupertino, CA",
-      ["Technology", "Coolness"],
+      "Tim Ho Wan",
+      "9 Fuk Wing St, Hong Kong",
+      ["Food", "Chinese"],
       function(error, result) {
         if(error) {
           console.log(error);
@@ -32,18 +32,10 @@ Template.addLocation.helpers({
         $near: {
           $geometry: {
             type: "Point",
-            coordinates: [114.109497, 22.396428]
+            coordinates: [114.1665923, 22.3291652]
           }
         }
       }
     });
-    /*return Meteor.users.find(
-      { _id: Meteor.userId() },
-      { username: 1, "profile.fullName": 0 }
-    );*/
-    /*return Meteor.users.aggregate([
-      {$match: $near: { $geometry: { type: "Point", coordinates: [114.109497, 22.396428]}}},
-      {$project: {_id: Meteor.userId()}}
-    ]);*/
   }
 });

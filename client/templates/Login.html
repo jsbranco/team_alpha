@@ -1,22 +1,28 @@
 <template name="login">
-    {{#if currentUser}}
-        Welcome {{username}}
-    {{/if}}
-    <h3>Login</h3>
-    {{> notifications}}
-    <form id="loginForm" action="action">
-        <div>
-            <label>Login</label>
-            <input type="email" id="email" name="email"/>
-            <br>
-            <label>Password</label>
-            <input type="password" id="password" name="password"/>
-            <br>
-            <input type="submit" id="login-button" value="Sign in"/>
-            <br>
-            <hr>
-            <button id="facebook-login" class="btn btn-default"> Login with Facebook</button>
-
-        </div>
-    </form>
+<div class="login-bg">
+	<div class="container">
+	    {{#if currentUser}}
+	        Welcome {{username}}
+	    {{/if}}
+	    <h3>Login</h3>
+	    {{> notifications}}
+	    <form id="loginForm" action="action">
+	        <div>
+		        <div class="form-group">
+	            <label>Login</label>
+	            <input class="form-control" type="email" id="email" name="email"/>
+		        </div>
+	            <br>
+	            <label>Password</label>
+	            <input type="password" id="password" name="password"/>
+	            <br>
+	            <input type="submit" id="login-button" value="Sign in"/>
+	            <br>
+	            <hr>
+	            <button id="facebook-login" class="btn btn-primary"> Login with Facebook</button>
+	
+	        </div>
+	    </form>
+	</div>
+</div>
 </template>
