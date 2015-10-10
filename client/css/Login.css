@@ -1,0 +1,19 @@
+.login-bg
+{
+	background: url("./img/login-bg.jpg") no-repeat;
+	min-height: 600px;
+}
+.login-bg h3
+{
+	margin-top: 15%;
+}
+.fixed-bottom
+{
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+.fixed-bottom .col-lg-6
+{
+	padding:0;
+}
