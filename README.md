@@ -41,6 +41,5 @@ Meteor Hackathon
 * tags - String
 
 ###returns
-* status - success / fail - String
-* message - String
-* OR Meteor.Error
+* error? - Meteor.Error
+* result - {message, status}
