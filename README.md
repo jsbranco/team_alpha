@@ -6,8 +6,8 @@ Meteor Hackathon
 ##User
 * email - String
 * password - String
-* firstName - String
-* lastName - String
+* profile.fullName - String
+* profile.locations - Array of locations
 
 ##Location
 * name - String
