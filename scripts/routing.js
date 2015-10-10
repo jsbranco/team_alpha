@@ -3,3 +3,5 @@ Router.route('/', function () {
 });
 
 Router.route('/addLocation');
+Router.route('/saveLocation');
+Router.route('/search');

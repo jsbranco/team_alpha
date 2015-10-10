@@ -29,4 +29,5 @@ gfk:notifications
 gfk:server-messages
 accounts-facebook
 service-configuration
+dburles:google-maps
 twbs:bootstrap

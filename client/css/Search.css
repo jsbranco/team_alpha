@@ -1,0 +1,43 @@
+/* CSS declarations go here */
+body {
+    background-image: url("img/login-bg.jpg");
+}
+
+.center {
+    width: 300px;
+    margin: 0px auto;
+}
+
+.container {
+	margin-top: 150px;
+}
+
+i {
+	color: #B3B3B3;
+}
+
+#searchButton {
+	outline: none;
+    background: none;
+    border: none;
+    padding: 0px;
+}
+
+#searchInputDiv {
+	padding: 0px 10px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #B3B3B3;
+    background-color: #fff;
+}
+
+#searchInput {
+    height: 50px;
+    width: 85%;
+    border-style: none;
+    font-size: 20px;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}

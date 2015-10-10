@@ -1,7 +1,17 @@
 /* CSS declarations go here */
 
+/*@font-face {
+    font-family: FontAwesome;
+    src: url(fontawesome-webfont.ttf);
+}
+
+button {
+	font-family: FontAwesome;
+}*/
+
 .map-container {
   width: 300px;
   max-width: 100%;
   height: 300px;
+  margin: 20px auto;
 }
