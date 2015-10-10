@@ -1,8 +1,12 @@
 if (Meteor.isClient) {
+  Locations = new Mongo.Collection("locations");
   // counter starts at 0
   Session.setDefault('counter', 0);
 
   Template.hello.helpers({
+    locations: function() {
+      return Locations.find({});
+    },
     counter: function () {
       return Session.get('counter');
     }

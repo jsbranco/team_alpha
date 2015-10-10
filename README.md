@@ -42,10 +42,5 @@ Meteor Hackathon
 
 ###returns
 * status - success / fail - String
-* error_message? - String
-
-##/getLocations
-* user_id
-
-###returns
-* locations - Array of locations
+* message - String
+* OR Meteor.Error
