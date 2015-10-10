@@ -5,7 +5,7 @@ if (Meteor.isClient) {
     GoogleMaps.load();
   });
 
-  Template.body.helpers({
+  Template.search.helpers({
   exampleMapOptions: function() {
     // Make sure the maps API has loaded
 
@@ -24,24 +24,21 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.hello.events({
-    'click': function(){
+  Template.search.events({
+    'click .searchButton': function(){
         // code goes here
 
         codeAddress();
 
-      }
-  });
+    },
+    "click .saveButton": function() {
+      // code goes here
+      console.log("saved!.. lol not really");
 
-    Template.saveLocation.events({
-    'click': function(){
-        // code goes here
-        console.log("saved!.. lol not really");
-
-        // get location name, tags and lat/lon
-        $("#locName").val();
-        $("#locTags").val();
-      }
+      // get location name, tags and lat/lon
+      $("#locName").val();
+      $("#locTags").val();
+    }
   });
 
 }

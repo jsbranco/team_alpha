@@ -32,8 +32,8 @@ Template.login.events({
         event.preventDefault();
 
         var email = tpl.find("#email").value,
-            password = tpl.find("#password").value
-        console.log("Email ", email)
+            password = tpl.find("#password").value;
+        console.log("Email ", email);
         Meteor.call("sanitizeEmail", email, function (err, email) {
             if (err)
                 Notifications.error('Failed to clean email', err.reason, {options:{timeout:2000}});
@@ -47,7 +47,7 @@ Template.login.events({
                     Router.go("/home");
                 }
             });
-        })
+        });
         return false;
     }
 });
@@ -66,7 +66,6 @@ Template.login.events({
             if (err) {
                 throw new Meteor.Error("Logout failed");
             }
-        })
+        });
     }
 });
-
