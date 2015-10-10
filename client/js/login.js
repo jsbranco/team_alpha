@@ -18,13 +18,17 @@ Template.login.onRendered(function () {
         messages: {
             email: {
                 required: "You must enter an email address."
+            },
+            password:
+            {
+                required:"You must enter a password"
             }
         }
     });
 });
 
 Template.login.events({
-    'submit #loginForm': function (event, tpl) {
+    'submit form': function (event, tpl) {
         event.preventDefault();
 
         var email = tpl.find("#email").value,
@@ -32,7 +36,7 @@ Template.login.events({
         console.log("Email ", email)
         Meteor.call("sanitizeEmail", email, function (err, email) {
             if (err)
-                Notifications.error('Failed to clean email', err.reason);
+                Notifications.error('Failed to clean email', err.reason, {options:{timeout:2000}});
 
             Meteor.loginWithPassword(email, password, function (err) {
                 if (err) {

@@ -9,7 +9,7 @@
 	display: block;
 	background: url("./img/map-bg.png") no-repeat;
 	width: 100%;
-	min-height: 500px;
+	min-height:100%;
 
 	-webkit-filter: blur(5px);
 	-moz-filter: blur(5px);
@@ -23,8 +23,8 @@
 	left: 0;
 	right: 0;
 	z-index: 0;
-	margin-left: 20px;
-	margin-right: 20px;
+	min-height:600px;
+
 }
 .map-bg h3
 {
@@ -40,13 +40,55 @@
 {
 	padding:0;
 }
-.registration-form
+.landing-form
 {
+	min-width:300px;
 	width:35%;
 	z-index:2;
 	margin:auto;
+
+	padding-left: 20px;
+	padding-right: 20px;
 }
-.registration-form hr
+
+.landing-form label.error
+{
+	color: #FF4B29;
+	font-size:12px;
+	text-align: center;
+	display:block;
+}
+@media(max-width:480px)
+{
+	.landing-form #create-account, .landing-form #login-account
+	{display:none}
+	.fixed-bottom #create-account.btn-block, .fixed-bottom #login-account.btn-block
+	{
+		display:block;
+	}
+}
+@media(min-width:481px)
+{
+	.landing-form #create-account, .landing-form #login-account
+	{display:block}
+	.fixed-bottom #create-account.btn-block, .fixed-bottom #login-account.btn-block
+	{
+		display:none;
+	}
+}
+.landing-form hr
 {
 	border-color: #A2A2A2;
+}
+@media(max-width:468px)
+{
+
+
+ul.notifications
+{
+	bottom: 5% !important;
+	position:inherit;
+	width:80%;
+	margin:auto;
+}
 }

@@ -1,29 +1,35 @@
 <template name="register">
     <div class="map-bg">
-        <div class="blur-bg">
+        <form id="registerForm" action="action">
+
             <div class="container">
-                <div class="registration-form">
+                <div class="landing-form">
                     <h3 class="text-center">Create Account</h3>
 
-                    <form id="registerForm" action="action">
-                        <div>
-                            <input type="text" id="fullName" class="form-control" placeholder="Full Name">
-                            <input type="text" id="username" class="form-control" placeholder="Username">
-                            <input type="email" id="email" class="form-control" placeholder="Email">
-                            <input type="password" id="password" class="form-control" placeholder="Password">
-                            <button type="submit" class="btn btn-primary btn-block" id="create-account"> Create
-                                Account
-                            </button>
-                        </div>
-                        <hr>
-                        <p class="text-center">OR</p>
-                        <hr>
-                        <div class="text-center">
-                            <button class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</button>
-                        </div>
-                    </form>
+                    <div>
+                        <input type="text" id="fullName" class="form-control" placeholder="Full Name" name="fullName">
+                        <input type="text" id="username" class="form-control" placeholder="Username" name="username">
+                        <input type="email" id="email" class="form-control" placeholder="Email" name="email">
+                        <input type="password" id="password" class="form-control" placeholder="Password"
+                               name="password">
+                        <input type="submit" class="btn btn-success btn-block" id="create-account"
+                               value="Create Account">
+                    </div>
+                    <h4 class="text-center"> Already a member? <a data-href="#" class="sign-in">Sign in</a></h4>
+
+                    <hr>
+                    <p class="text-center">OR</p>
+                    <hr>
+                    <div class="text-center">
+                        <button class="btn btn-primary"><i class="fa fa-facebook"></i> Facebook</button>
+                    </div>
                 </div>
             </div>
-        </div>
+            <div class="fixed-bottom">
+                <input type="submit" class="btn btn-danger btn-block" id="create-account" value="Create Account">
+            </div>
+        </form>
+
+
     </div>
 </template>
