@@ -1,51 +1,52 @@
 # team_alpha
 Meteor Hackathon
 
-#User
+#Objects
+
+##User
 * email - String
 * password - String
 * firstName - String
 * lastName - String
 
-#Location
+##Location
 * name - String
 * address - String
 * logitude - Number
 * latitute - Number
 * tags - Array of Strings
 
-
-
-#register
+#API
+##/register
 * email - String
 * password - String
 * firstName - String
 * lastName - String
 
-##returns
+###returns
 * status - success / fail - String
 * error_message? - String
 
-#login
+##/login
 =====
 * email - String
 * password - String
 
-##returns
+###returns
 * status - success / fail - String
 * error_message? - String
 
-#addLocation
+##/addLocation
 * name - String
 * address - String
 * tags - String
 
-##returns
+###returns
 * status - success / fail - String
 * error_message? - String
 
-#getLocations
+##/getLocations
 * user_id
 
-##returns
+###returns
 * locations - Array of locations
