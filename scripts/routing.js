@@ -3,10 +3,11 @@ Router.configure({
 });
 
 Router.route('/', function () {
-  this.render('hello');
+  this.render('search');
 });
 
 Router.route('/addLocation');
+Router.route("/home");
 Router.route("/landing");
 Router.route("/login", {
   layoutTemplate: "no-layout"
@@ -14,4 +15,4 @@ Router.route("/login", {
 Router.route("/register", {
   layoutTemplate: "no-layout"
 });
-Router.route("/home");
+Router.route("/search");

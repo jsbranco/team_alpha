@@ -1,21 +1,8 @@
-<head>
-  <title></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-
-<template name="hello">
-  <button>Search</button>
-</template>
-
-<template name="saveLocation">
-  <button>Save</button>
-</template>
-
-<body>
+<template name="search">
   <h1>Search</h1>
   <input id="searchInput" type="text">
-  {{> hello}}
-  {{> saveLocation}}
+  <button class="searchButton">Search</button>
+  <button class="saveButton">Save</button>
   <div class="map-container">
     {{> googleMap name="exampleMap" options=exampleMapOptions}}
   </div>
@@ -23,4 +10,4 @@
   	<label>Location Name:</label><input id="locName" type="text">
   	<label>Tags:</label><input id="locTags" type="text">
   </div>
-</body>
+</template>
