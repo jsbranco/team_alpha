@@ -28,7 +28,6 @@ Meteor Hackathon
 * error_message? - String
 
 ##/login
-=====
 * email - String
 * password - String
 
