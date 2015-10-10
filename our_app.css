@@ -1,7 +1,52 @@
 /* CSS declarations go here */
 
+/*@font-face {
+    font-family: FontAwesome;
+    src: url(fontawesome-webfont.ttf);
+}
+
+button {
+	font-family: FontAwesome;
+}*/
+
+
+.center {
+    width: 200px;
+    margin: 0px auto;
+}
+
+i {
+	color: #B3B3B3;
+}
+
 .map-container {
   width: 300px;
   max-width: 100%;
   height: 300px;
+  margin: 20px auto;
+}
+
+#searchButton {
+	outline: none;
+    background: none;
+    border: none;
+}
+
+#searchInputDiv {
+	padding: 15px 50px;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: #B3B3B3;
+}
+
+#searchInput {
+    height: 30px;
+    width: 70%;
+    border-style: none;
+    font-size: 30px;
+    text-align: center;
+}
+
+body {
+	margin-top: 100px;
 }
