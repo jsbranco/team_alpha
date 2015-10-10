@@ -1,0 +1,25 @@
+<head>
+  <title>our_app</title>
+</head>
+
+<template name="hello">
+  <button>Search</button>
+</template>
+
+<template name="saveLocation">
+  <button>Save</button>
+</template>
+
+<body>
+  <h1>Search</h1>
+  <input id="searchInput" type="text">
+  {{> hello}}
+  {{> saveLocation}}
+  <div class="map-container">
+    {{> googleMap name="exampleMap" options=exampleMapOptions}}
+  </div>
+  <div>
+  	<label>Location Name:</label><input id="locName" type="text">
+  	<label>Tags:</label><input id="locTags" type="text">
+  </div>
+</body>
