@@ -33,10 +33,7 @@ dburles:google-maps
 twbs:bootstrap
 fortawesome:fontawesome
 zimme:iron-router-auth
-<<<<<<< HEAD
-=======
 josephktcheung:drawer
->>>>>>> 4582cb4ea6aa91b510818d8e4b0bdd6cecfd2122
 jeremy:geocomplete
 ccorcos:transitioner
 email

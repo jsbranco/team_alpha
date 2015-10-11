@@ -1,14 +1,7 @@
 /* CSS declarations go here */
-.container {
-    background-image: url("img/map-bg.jpg");
+.search-wrapper {
     height: 800px;
     margin-top: -50px;
-
-/*      -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);*/
 }
 
 .center {
@@ -37,7 +30,7 @@
   margin-left: 10px;
 }
 
-i {
+.search-wrapper i {
 	color: #B3B3B3;
 }
 
