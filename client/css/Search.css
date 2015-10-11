@@ -1,7 +1,9 @@
 /* CSS declarations go here */
 .search-wrapper {
     height: 800px;
-    margin-top: -50px;
+    position: absolute;
+    width: 100%;
+    left: 0;
 }
 
 .center {
@@ -10,50 +12,61 @@
 }
 
 .customButtonDiv {
-  width: 300px;
+    width: 300px;
 }
 
-.customButtonDiv > button{
-  width: 100%;
-  padding: 10px 20px;
-  outline: none;
-  background: none;
-  border-style: solid;
-  border-radius: 5px;
-  border-color: #B3B3B3;
-  background-color: #fff;
-  color: #B3B3B3;
-  font-size: 20px;
+.customButtonDiv > button {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    background: none;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #B3B3B3;
+    background-color: #fff;
+    color: #B3B3B3;
+    font-size: 20px;
 }
 
-.customButtonDiv > button > i{
-  margin-left: 10px;
+.customButtonDiv > button > i {
+    margin-left: 10px;
 }
 
 .search-wrapper i {
-	color: #B3B3B3;
+    color: #B3B3B3;
 }
 
 .pac-item {
-  line-height: 60px;
+    line-height: 60px;
 }
 
 #searchButton {
-	outline: none;
+    outline: none;
     background: none;
     border: none;
     padding: 0px;
 }
 
 #searchInputDiv {
-        margin-top: 250px;
-	padding: 0px 10px;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+    -webkit-transition: top 1s ease-in-out;
+    -moz-transition: top 1s ease-in-out;
+    -o-transition: top 1s ease-in-out;
+    transition: top 1s ease-in-out;
+
+    top: 25%;
+    padding: 0px 10px;
     border-style: solid;
     border-radius: 5px;
     border-color: #B3B3B3;
     background-color: #fff;
+    position: relative;
+    border-width: 1px;
+    z-index: 130;
 
-  position: relative;
 }
 
 #searchInput {
@@ -63,13 +76,40 @@
     font-size: 20px;
 }
 
-textarea:focus, input:focus{
+#searchInputDiv.animate {
+    top: 0%;
+
+    -webkit-transition: top 1s ease-in-out;
+    -moz-transition: top 1s ease-in-out;
+    -o-transition: top 1s ease-in-out;
+    transition: top 1s ease-in-out;
+
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+    width: 100%;
+
+}
+
+#searchInputDiv.animate #searchInput {
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+    -webkit-transition: top 1s ease-in-out;
+    -moz-transition: top 1s ease-in-out;
+    -o-transition: top 1s ease-in-out;
+    transition: top 1s ease-in-out;
+}
+
+textarea:focus, input:focus {
     outline: 0;
 }
 
 .map-container {
-  width: 300px;
-  max-width: 100%;
-  height: 300px;
-  margin: 20px auto;
+    width: 300px;
+    max-width: 100%;
+    height: 300px;
+    margin: 20px auto;
 }
