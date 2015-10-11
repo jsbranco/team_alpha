@@ -33,9 +33,6 @@ dburles:google-maps
 twbs:bootstrap
 fortawesome:fontawesome
 zimme:iron-router-auth
-<<<<<<< HEAD
 jeremy:geocomplete
-=======
 ccorcos:transitioner
 email
->>>>>>> db394c91fd2eabe82565011851cebfa34fea5cf9
