@@ -20,7 +20,7 @@ Meteor.methods({
 Accounts.onCreateUser(function(options, user)
 {
     console.log("user :", JSON.stringify(user));
-    user.friends = [];
+    user.following = [];
     return user;
 })
 function sanitizeEmail(email) {
