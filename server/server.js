@@ -21,7 +21,7 @@ Accounts.onCreateUser(function(options, user)
 {
     console.log("user :", JSON.stringify(user));
     user.profile = options.profile;
-    user.following = [];
+    user.profile.following= [];
     return user;
 })
 function sanitizeEmail(email) {
