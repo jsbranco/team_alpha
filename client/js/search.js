@@ -82,13 +82,13 @@ if (Meteor.isClient) {
                 long = tpl.find("#lgt").value,
                 address= tpl.find("#format_address").value
 
-            Meteor.call("addLocation", )
+            //Meteor.call("addLocation")
 
         }
 	});
 
 
-    Template.saveLocation.events({
+    Template.search.events({
     'click #saveButton': function(){
         // code goes here
         console.log("saved!.. lol not really");
@@ -109,7 +109,7 @@ function codeAddress() {
       $(".pac-item").click(function()
       {
 
-      })
+      });
     if (status == google.maps.GeocoderStatus.OK) {
 
       var myMap = GoogleMaps.maps.exampleMap.instance;
