@@ -20,9 +20,9 @@ Router.route('/', {
     }
 });
 
-Router.route("/addFriends", {
+Router.route("/following", {
   onAfterAction: function() {
-    document.title = "Add Friends";
+    document.title = "Following";
   }
 });
 

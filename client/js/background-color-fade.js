@@ -11,4 +11,5 @@ Template.bgColor.events({
       $(".backgroundColor").css("opacity", 0);
     }
   }
+  gi
 });

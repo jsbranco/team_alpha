@@ -50,14 +50,14 @@ if (Meteor.isClient) {
 	      // get location name, tags and lat/lon
 	      $("#locName").val();
 	      $("#locTags").val();
-	    }
+	    },
 	   //  'focusout #searchInput': function(){
 	  	// 	console.log("hello");
 	  	// 	$("#searchInputDiv").animate({
 	  	// 		top: '+=275'
 	  	// 	});
 	  	// },
-	  	'focus #searchInput': function(){
+      'focus #searchInput': function(){
 	  		$(".map-container").hide();
 	  		$(".customButtonDiv").hide();
 	  		$("#searchInputDiv").animate({
@@ -69,8 +69,6 @@ if (Meteor.isClient) {
 	  		if ($("#searchInput").val().length > 1) {
 	  			console.log("true");
 	  		}
-	  	}
-	});
     // $(".map-container").show();
         codeAddress();
 
