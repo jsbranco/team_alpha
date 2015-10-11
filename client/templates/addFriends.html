@@ -1,0 +1,14 @@
+<template name="addFriends">
+  <ul class="users">
+    {{#each users}}
+      <li>
+        {{username}}
+        {{#if isFollowingUser _id}}
+          <span>- Following</span>
+        {{else}}
+          <a class="addFriendButton" href="#"><i class="fa fa-user-plus"></i></a>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+</template>

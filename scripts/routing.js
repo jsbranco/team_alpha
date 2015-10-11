@@ -20,6 +20,14 @@ Router.route('/', {
     }
 });
 
+Router.route("/addFriends", {
+  onAfterAction: function() {
+    document.title = "Add Friends";
+  }
+});
+
+Router.route("/bgColor");
+
 Router.route("/bookmarks", {
     action: function () {
         this.render("search");

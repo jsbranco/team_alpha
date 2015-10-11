@@ -1,0 +1,27 @@
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: -1;
+  -webkit-transition:all 1s ease-in;
+  -moz-transition:all 1s ease-in;
+  -o-transition:all 1s ease-in;
+  -ms-transition:all 1s ease-in;
+  transition:all 1s ease-in;
+}
+
+.backgroundMap {
+  background: url("./img/map-bg.jpg");
+}
+
+.backgroundColor {
+  background-color: red;
+  opacity: 0;
+}
+
+.toggleBG {
+  margin: 200px;
+}
