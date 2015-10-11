@@ -8,7 +8,6 @@ Template.addFriends.events({
       if(error) {
         console.log(error);
       } else {
-        thisButton.remove();
         Notifications.success("Following", "You are now following " + user.username + "!");
       }
     });

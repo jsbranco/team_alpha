@@ -3,7 +3,7 @@
     {{#each users}}
       <li>
         {{username}}
-        {{#if isFollowingUser .}}
+        {{#if isFollowingUser _id}}
           <span>- Following</span>
         {{else}}
           <a class="addFriendButton" href="#"><i class="fa fa-user-plus"></i></a>
@@ -11,4 +11,6 @@
       </li>
     {{/each}}
   </ul>
+
+  {{> notifications}}
 </template>
