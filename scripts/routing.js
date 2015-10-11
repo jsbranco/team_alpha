@@ -26,21 +26,29 @@ Router.route("/following", {
   }
 });
 
-Router.route("/bgColor");
-
 Router.route("/bookmarks", {
-    action: function () {
-        this.render("search");
-    },
-    data: function () {
-        return "bookmarks";
-    }
+  action: function () {
+    this.render("bookmarks", {
+      data: function() {
+        // Return locations for the logged in user
+        var locations = Locations.find({
+          userId: Meteor.userId(),
+          loc: {
+            $near: {
+              $geometry: {
+                type: "Point",
+                coordinates: [114.1665923, 22.3291652]
+              }
+            }
+          }
+        });
+        console.log(locations.fetch());
+        return locations;
+      }
+    });
+  }
 });
 
-Router.route('/addLocation');
-Router.route('/saveLocation');
-Router.route("/home");
-Router.route("/landing");
 Router.route("/login", {
     layoutTemplate: "no-layout",
     onAfterAction: function () {
@@ -92,6 +100,29 @@ Router.route("/search", {
     action: function () {
         Router.go("/");
     }
+});
+
+Router.route("/user/:_id", {
+  action: function() {
+    this.render("bookmarks", {
+      data: function() {
+        // Return locations for the requested user
+        var locations = Locations.find({
+          userId: this.params._id,
+          loc: {
+            $near: {
+              $geometry: {
+                type: "Point",
+                coordinates: [114.1665923, 22.3291652]
+              }
+            }
+          }
+        });
+        console.log(locations.fetch());
+        return locations;
+      }
+    });
+  }
 });
 
 var animateContentOut = function () {

@@ -1,3 +1,5 @@
+Locations = new Meteor.Collection("locations");
+
 Template.addLocation.events({
   "click .addLocationButton": function() {
     console.log("adding location");

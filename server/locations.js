@@ -1,6 +1,7 @@
 Locations = new Meteor.Collection("locations");
 Meteor.publish("locations", function() {
-  return Locations.find({userId: Meteor.userId()});
+  //return Locations.find({userId: Meteor.userId()});
+  Locations.find({});
 });
 
 
