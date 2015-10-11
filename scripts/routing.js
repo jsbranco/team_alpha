@@ -37,6 +37,10 @@ Router.route("/bookmarks", {
     }
 });
 
+Router.route('/addLocation');
+Router.route('/saveLocation');
+Router.route("/home");
+Router.route("/landing");
 Router.route("/login", {
     layoutTemplate: "no-layout",
     onAfterAction: function () {
