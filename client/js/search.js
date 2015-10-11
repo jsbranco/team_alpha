@@ -31,7 +31,7 @@ if (Meteor.isClient) {
   	Template.search.onRendered(function() {
   		this.autorun(function () {
   			if (GoogleMaps.loaded()) {
-  				$("#searchInput").geocomplete({details:"form"});
+  				$("#searchInput").geocomplete({ map:".map-container",details:"form"});
   			}
   		});
   	});
@@ -58,23 +58,33 @@ if (Meteor.isClient) {
 	  	// 		top: '+=275'
 	  	// 	});
 	  	// },
-      'focus #searchInput': function(){
-	  		$(".map-container").hide();
+	  	'focus #searchInput': function(){
+	  		//$(".map-container").hide();
 	  		$(".customButtonDiv").hide();
 	  		$("#searchInputDiv").addClass("animate");
 
 	  	},
-        //'blur #searchInput': function(){
-        //    $(".map-container").show();
-        //    $(".customButtonDiv").show();
-        //    $("#searchInputDiv").removeClass("animate");
-        //
-        //},
+        'blur #searchInput': function(){
+            //$(".map-container").show();
+            $(".customButtonDiv").show();
+            //$("#searchInputDiv").removeClass("animate");
+
+        },
 	  	'change #searchInput': function(){
 	  		if ($("#searchInput").val().length > 1) {
 	  			console.log("true");
 	  		}
-	  	}
+	  	},
+        'submit .datapoints':function(e, tpl)
+        {
+            e.preventDefault();
+            var lat = tpl.find("#lat").value,
+                long = tpl.find("#lgt").value,
+                address= tpl.find("#format_address").value
+
+            //Meteor.call("addLocation")
+
+        }
 	});
 
 

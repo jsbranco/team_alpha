@@ -1,24 +1,28 @@
-
 <template name="search">
     <div class="container">
         <!-- 	<h1>Search</h1>
          -->
-        <div class="search-wrapper">
-            <div id="searchInputDiv" class="center">
-                <input id="searchInput" type="text" placeholder="type a location">
-                <button id="searchButton"><i class="fa fa-search fa-2x"></i></button>
-            </div>
-            <div class="map-container">
-                {{> googleMap name="exampleMap" options=exampleMapOptions}}
-            </div>
-            <div class="center customButtonDiv">
-                <button id="saveButton">bookmark<i class="fa fa-bookmark fa-1x"></i></button>
-            </div>
+
+        <div class="map-container">
+            {{> googleMap name="exampleMap" options=exampleMapOptions}}
         </div>
-        <form>
-            Latitude:   <input name="lat" type="text" value="">
-            Longitude:  <input name="lng" type="text" value="">
-            Address:    <input name="formatted_address" type="text" value="">
+        <div id="searchInputDiv" class="center">
+            <input id="searchInput" type="text" placeholder="type a location">
+            <button id="searchButton"><i class="fa fa-search fa-2x"></i></button>
+        </div>
+        <form class="datapoints">
+            <div class="search-wrapper">
+
+                <div class="text-center customButtonDiv">
+                    <button id="saveButton" class="btn btn-primary">Bookmark<i class="fa fa-bookmark fa-1x"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden-form">
+                Latitude: <input name="lat" id="lat" type="text" value="">
+                Longitude: <input name="lng" id="lgt" type="text" value="">
+                Address: <input name="formatted_address" id="format_address" type="text" value="">
+            </div>
         </form>
     </div>
 </template>
