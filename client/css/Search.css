@@ -4,7 +4,30 @@
     position: absolute;
     width: 100%;
     left: 0;
-    bottom: 0px;
+    bottom: 5%;
+}
+
+@media (max-width: 468px) {
+    #searchInputDiv.animate {
+        top: 0%;
+        -webkit-transition: width 1s ease-in-out;
+        -moz-transition: width 1s ease-in-out;
+        -o-transition: width 1s ease-in-out;
+        transition: width 1s ease-in-out;
+        width: 70%;
+    }
+}
+
+@media (min-width: 469px) {
+    #searchInputDiv.animate {
+        top: 0%;
+        -webkit-transition: width 1s ease-in-out;
+        -moz-transition: width 1s ease-in-out;
+        -o-transition: width 1s ease-in-out;
+        transition: width 1s ease-in-out;
+        width: 100%;
+
+    }
 }
 
 .center {
@@ -14,7 +37,7 @@
 
 .customButtonDiv {
     width: 300px;
-    margin:auto;
+    margin: auto;
 }
 
 .customButtonDiv > button > i {
@@ -24,10 +47,11 @@
 .pac-item {
     line-height: 60px;
 }
-.datapoints .hidden-form
-{
-    display:none;
+
+.datapoints .hidden-form {
+    display: none;
 }
+
 #searchButton {
     outline: none;
     background: none;
@@ -57,22 +81,15 @@
 
 }
 
+#searchInputDiv .fa-search {
+    color: #D6D5D5;
+}
+
 #searchInput {
     height: 50px;
     width: 85%;
     border-style: none;
     font-size: 20px;
-}
-
-#searchInputDiv.animate {
-    top: 0%;
-
-    -webkit-transition: width 1s ease-in-out;
-    -moz-transition: width 1s ease-in-out;
-    -o-transition: width 1s ease-in-out;
-    transition: width 1s ease-in-out;
-    width: 100%;
-
 }
 
 #searchInputDiv.animate #searchInput {
@@ -92,8 +109,8 @@ textarea:focus, input:focus {
 
 .map-container {
     width: 100%;
-    left:0;
+    left: 0;
     height: 300px;
-    position:absolute;
+    position: absolute;
     z-index: 0;
 }

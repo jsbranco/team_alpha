@@ -9,72 +9,96 @@
 }
 
 .drawer-navbar-default .drawer-brand a {
-	color: black;
-	font-weight: 900;
-	}
-	
-
-
-@media (min-width: 768px){
-	.drawer-navbar.drawer-right .drawer-main {
-		Height: 50px !important;	
-	}
-	.drawer-menu {
-		float: right;
-	}
-	.drawer-navbar-default .drawer-brand a:hover, .drawer-navbar-default .drawer-brand a:focus .drawer-brand a:active {
-		background-color:transparent !important;
-	}
-	.drawer-navbar-default .drawer-brand a {
-		font-size: large;
-	}
-	.drawer-menu li a i {
-	margin-right: 10px;
+    color: black;
+    font-weight: 900;
 }
-	a {
-	color: black;
-	font-weight: bold;
-	}
-}
-@media (max-width: 768px){
 
-.drawer-menu li {
-	padding: 30px 15px;
-	border-bottom: 3px solid #3C4652;
-	}
-.drawer-navbar-default .drawer-brand a {
-	color: white;
-	font-weight: 900;
-	border-bottom: 3px solid #3C4652;
-	}
-.drawer-navbar-default {
-    background-color: #2B3541;
+@media (max-width: 468px) {
+    .drawer-hamburger-icon, .drawer-hamburger-icon:before, .drawer-hamburger-icon:after {
+        height: 3px;
+        width: 100%;
+        border-radius: 1px;
+        background-color: #FFF;
+        -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
+        -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
+        transition: all .4s cubic-bezier(.19, 1, .22, 1);
+        border: 1px solid #ABC6F6;
     }
-.drawer-menu li a {
-	color: #FFFFFF;
-	Font-weight: normal;
-	font-size: 24px;
-	}
-.drawer-menu li a i {
-	margin-right: 18px;
 }
-.fa-heart {
-  color: #FD5161;
-  }
-.fa-sign-out {
-  color: white;
-  }
-.fa-search {
-  color: white;
-  }
-.fa-users {
-  color: #B8E986;
-  }
-.fa-remove {
-  color: white;
-  }
+
+@media (min-width: 768px) {
+    .drawer-navbar.drawer-right .drawer-main {
+        Height: 50px !important;
+    }
+
+    .drawer-menu {
+        float: right;
+    }
+
+    .drawer-navbar-default .drawer-brand a:hover, .drawer-navbar-default .drawer-brand a:focus .drawer-brand a:active {
+        background-color: transparent !important;
+    }
+
+    .drawer-navbar-default .drawer-brand a {
+        font-size: large;
+    }
+
+    .drawer-menu li a i {
+        margin-right: 10px;
+    }
+
+    a {
+        color: black;
+        font-weight: bold;
+    }
 }
-}
+
+@media (max-width: 768px) {
+
+    .drawer-menu li {
+        padding: 30px 15px;
+        border-bottom: 3px solid #3C4652;
+    }
+
+    .drawer-navbar-default .drawer-brand a {
+        color: white;
+        font-weight: 900;
+        border-bottom: 3px solid #3C4652;
+    }
+
+    .drawer-navbar-default {
+        background-color: #2B3541;
+    }
+
+    .drawer-menu li a {
+        color: #FFFFFF;
+        Font-weight: normal;
+        font-size: 24px;
+    }
+
+    .drawer-menu li a i {
+        margin-right: 18px;
+    }
+
+    .fa-heart {
+        color: #FD5161;
+    }
+
+    .fa-sign-out {
+        color: white;
+    }
+
+    .fa-search {
+        color: white;
+    }
+
+    .fa-users {
+        color: #B8E986;
+    }
+
+    .fa-remove {
+        color: white;
+    }
 }
 
 

@@ -10,13 +10,17 @@
             <input id="searchInput" type="text" placeholder="type a location">
             <button id="searchButton"><i class="fa fa-search fa-2x"></i></button>
         </div>
-        <form class="datapoints">
+        <form class="datapoints" id="locationForm">
             <div class="search-wrapper">
 
                 <div class="text-center customButtonDiv">
+                    <div class="form-group">
+                        <input class="form-control" name="title" id="title" placeholder="Short Description">
+                    </div>
                     <button id="saveButton" class="btn btn-primary">Bookmark<i class="fa fa-bookmark fa-1x"></i>
                     </button>
                 </div>
+                {{>notifications}}
             </div>
             <div class="hidden-form">
                 Latitude: <input name="lat" id="lat" type="text" value="">
