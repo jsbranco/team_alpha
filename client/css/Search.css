@@ -1,9 +1,10 @@
 /* CSS declarations go here */
 .search-wrapper {
-    height: 800px;
+    height: 100px;
     position: absolute;
     width: 100%;
     left: 0;
+    bottom: 0px;
 }
 
 .center {
@@ -13,33 +14,20 @@
 
 .customButtonDiv {
     width: 300px;
-}
-
-.customButtonDiv > button {
-    width: 100%;
-    padding: 10px 20px;
-    outline: none;
-    background: none;
-    border-style: solid;
-    border-radius: 5px;
-    border-color: #B3B3B3;
-    background-color: #fff;
-    color: #B3B3B3;
-    font-size: 20px;
+    margin:auto;
 }
 
 .customButtonDiv > button > i {
     margin-left: 10px;
 }
 
-.search-wrapper i {
-    color: #B3B3B3;
-}
-
 .pac-item {
     line-height: 60px;
 }
-
+.datapoints .hidden-form
+{
+    display:none;
+}
 #searchButton {
     outline: none;
     background: none;
@@ -57,7 +45,7 @@
     -o-transition: top 1s ease-in-out;
     transition: top 1s ease-in-out;
 
-    top: 25%;
+    top: 300px;
     padding: 0px 10px;
     border-style: solid;
     border-radius: 5px;
@@ -78,11 +66,6 @@
 
 #searchInputDiv.animate {
     top: 0%;
-
-    -webkit-transition: top 1s ease-in-out;
-    -moz-transition: top 1s ease-in-out;
-    -o-transition: top 1s ease-in-out;
-    transition: top 1s ease-in-out;
 
     -webkit-transition: width 1s ease-in-out;
     -moz-transition: width 1s ease-in-out;
@@ -108,8 +91,9 @@ textarea:focus, input:focus {
 }
 
 .map-container {
-    width: 300px;
-    max-width: 100%;
+    width: 100%;
+    left:0;
     height: 300px;
-    margin: 20px auto;
+    position:absolute;
+    z-index: 0;
 }
