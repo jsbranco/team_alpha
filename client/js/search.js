@@ -45,12 +45,13 @@ if (Meteor.isClient) {
 	    },
 	    "click #saveButton": function() {
 	      // code goes here
+
 	      console.log("saved!.. lol not really");
 
 	      // get location name, tags and lat/lon
 	      $("#locName").val();
 	      $("#locTags").val();
-	    }
+	    },
 	   //  'focusout #searchInput': function(){
 	  	// 	console.log("hello");
 	  	// 	$("#searchInputDiv").animate({
@@ -71,11 +72,6 @@ if (Meteor.isClient) {
 	  		}
 	  	}
 	});
-    // $(".map-container").show();
-        codeAddress();
-
-      }
-  });
 
 
     Template.saveLocation.events({
