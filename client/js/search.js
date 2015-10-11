@@ -2,8 +2,11 @@ if (Meteor.isClient) {
   //maps
 
   Meteor.startup(function() {
-    GoogleMaps.load();
+  GoogleMaps.load({
+    key: 'AIzaSyDuzmJjjF_AFYTyUrHb_-eIwsbPAfoUpeA',
+    libraries: 'places'  // also accepts an array if you need more than one
   });
+});
 
   Template.search.helpers({
   exampleMapOptions: function() {
@@ -18,28 +21,55 @@ if (Meteor.isClient) {
 
         return {
           center: new google.maps.LatLng(-37.8136, 144.9631),
-          zoom: 8
+          zoom: 16
         };
       }
     }
   });
 
-  Template.search.events({
-    'click .searchButton': function(){
-        // code goes here
+  	Template.search.onRendered(function() {
+  		this.autorun(function () {
+  			if (GoogleMaps.loaded()) {
+  				$("#searchInput").geocomplete();
+  			}
+  		});
+  	});
 
-    // $(".map-container").show();
-        codeAddress();
-    },
-    "click .saveButton": function() {
-      // code goes here
-      console.log("saved!.. lol not really");
+	Template.search.events({
+	    'click #searchButton': function(){
+	        // code goes here
+	    	$(".map-container").show();
+	    	$(".customButtonDiv").show();
+	        codeAddress();
+	    },
+	    "click #saveButton": function() {
+	      // code goes here
+	      console.log("saved!.. lol not really");
 
-      // get location name, tags and lat/lon
-      $("#locName").val();
-      $("#locTags").val();
-    }
-  });
+	      // get location name, tags and lat/lon
+	      $("#locName").val();
+	      $("#locTags").val();
+	    }
+	   //  'focusout #searchInput': function(){
+	  	// 	console.log("hello");
+	  	// 	$("#searchInputDiv").animate({
+	  	// 		top: '+=275'
+	  	// 	});
+	  	// },
+	  	'focus #searchInput': function(){
+	  		$(".map-container").hide();
+	  		$(".customButtonDiv").hide();
+	  		$("#searchInputDiv").animate({
+	  			marginTop: '-0.2in'
+	  		});
+
+	  	},
+	  	'change #searchInput': function(){
+	  		if ($("#searchInput").val().length > 1) {
+	  			console.log("true");
+	  		}
+	  	}
+	});
 
 }
 

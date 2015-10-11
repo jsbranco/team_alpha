@@ -1,6 +1,14 @@
 /* CSS declarations go here */
-body {
-    background-image: url("img/login-bg.jpg");
+.container {
+    background-image: url("img/map-bg.jpg");
+    height: 800px;
+    margin-top: -50px;
+
+/*      -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);*/
 }
 
 .center {
@@ -8,12 +16,33 @@ body {
     margin: 0px auto;
 }
 
-.container {
-	margin-top: 150px;
+.customButtonDiv {
+  width: 300px;
+}
+
+.customButtonDiv > button{
+  width: 100%;
+  padding: 10px 20px;
+  outline: none;
+  background: none;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #B3B3B3;
+  background-color: #fff;
+  color: #B3B3B3;
+  font-size: 20px;
+}
+
+.customButtonDiv > button > i{
+  margin-left: 10px;
 }
 
 i {
 	color: #B3B3B3;
+}
+
+.pac-item {
+  line-height: 60px;
 }
 
 #searchButton {
@@ -24,11 +53,14 @@ i {
 }
 
 #searchInputDiv {
+        margin-top: 250px;
 	padding: 0px 10px;
     border-style: solid;
     border-radius: 5px;
     border-color: #B3B3B3;
     background-color: #fff;
+
+  position: relative;
 }
 
 #searchInput {

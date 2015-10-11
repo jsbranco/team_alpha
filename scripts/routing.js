@@ -8,7 +8,6 @@ Router.route('/', function () {
 
 Router.route('/addLocation');
 Router.route('/saveLocation');
-Router.route('/search');
 Router.route("/home");
 Router.route("/landing");
 Router.route("/login", {
