@@ -4,7 +4,27 @@ Template.login.helpers({
 
 });
 Template.login.onRendered(function () {
-
+    $('#loginForm').validate({
+        rules: {
+            email: {
+                required: true,
+                email: true
+            },
+            password: {
+                required: true,
+                minlength: 6
+            }
+        },
+        messages: {
+            email: {
+                required: "You must enter an email address."
+            },
+            password:
+            {
+                required:"You must enter a password"
+            }
+        }
+    });
 });
 
 Template.login.events({
@@ -13,27 +33,7 @@ Template.login.events({
       Router.go("/register")
     },
     'submit form': function (event, tpl) {
-        $('#loginForm').validate({
-            rules: {
-                email: {
-                    required: true,
-                    email: true
-                },
-                password: {
-                    required: true,
-                    minlength: 6
-                }
-            },
-            messages: {
-                email: {
-                    required: "You must enter an email address."
-                },
-                password:
-                {
-                    required:"You must enter a password"
-                }
-            }
-        });
+
         event.preventDefault();
 
         var email = tpl.find("#email").value,
@@ -56,6 +56,7 @@ Template.login.events({
         return false;
     }
 });
+
 
 Template.login.events({
     'click #facebook-login': function (event) {
