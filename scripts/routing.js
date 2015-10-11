@@ -7,6 +7,7 @@ Router.route('/', function () {
 });
 
 Router.route('/addLocation');
+Router.route('/saveLocation');
 Router.route("/home");
 Router.route("/landing");
 Router.route("/login", {
@@ -15,4 +16,3 @@ Router.route("/login", {
 Router.route("/register", {
   layoutTemplate: "no-layout"
 });
-Router.route("/search");

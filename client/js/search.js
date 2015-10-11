@@ -35,6 +35,7 @@ if (Meteor.isClient) {
       }
   });
 
+
     Template.saveLocation.events({
     'click #saveButton': function(){
         // code goes here

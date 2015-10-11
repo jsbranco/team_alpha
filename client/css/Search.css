@@ -41,3 +41,10 @@ i {
 textarea:focus, input:focus{
     outline: 0;
 }
+
+.map-container {
+  width: 300px;
+  max-width: 100%;
+  height: 300px;
+  margin: 20px auto;
+}
