@@ -78,7 +78,7 @@ if (Meteor.isClient) {
 	});
 
 
-    Template.saveLocation.events({
+    Template.search.events({
     'click #saveButton': function(){
         // code goes here
         console.log("saved!.. lol not really");

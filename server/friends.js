@@ -19,7 +19,7 @@ Meteor.methods({
         if (userId == undefined) {
             throw new Meteor.Error("user-id-missing", "User ID is required.");
         }
-        if (Meteor.user().profile.following.indexOf(userId) >= 0) {
+        if (Meteor.user().profile.following.indexOf(userId) < 0) {
             throw new Meteor.Error("not-following-user", "User not in the 'following' list");
         }
 

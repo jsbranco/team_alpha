@@ -2,11 +2,10 @@ Template.user.events({
   "click .followButton": function(event) {
     var thisButton = $(event.target);
     var userId = thisButton.val();
-    var user = Meteor.users.find({ _id: userId }).fetch();
-    console.log(user);
+    var user = Meteor.users.findOne({ _id: userId });
     Meteor.call("followUser", userId, function(error, result) {
       if(error) {
-        console.log(error);
+        Notifications.error("Following Error", error);
       } else {
         Notifications.success("Following", "You are now following " + user.username + "!");
       }
@@ -15,13 +14,12 @@ Template.user.events({
   "click .unfollowButton": function(event) {
     var thisButton = $(event.target);
     var userId = thisButton.val();
-    var user = Meteor.users.find({ _id: userId }).fetch();
-    console.log(user);
+    var user = Meteor.users.findOne({ _id: userId });
     Meteor.call("unfollowUser", userId, function(error, result) {
       if(error) {
-        console.log(error);
+        Notifications.error("Unfollowing Error", error);
       } else {
-        Notifications.success("Following", "You have unfollowed " + user.username + "!");
+        Notifications.success("Unfollowed", "You have unfollowed " + user.username + ".");
       }
     });
   }

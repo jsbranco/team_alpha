@@ -20,7 +20,7 @@
     {{> avatar user=this shape="circle" size="large"}}
     {{username}}
     {{#if isFollowingUser _id}}
-      <button class="btn btn-success following-button unfollowButton">Following</button>
+      <button class="btn btn-success following-button unfollowButton" value="{{_id}}">Following</button>
     {{else}}
       <button class="btn btn-primary following-button followButton" value="{{_id}}">Follow <i class="fa fa-plus"></i></button>
     {{/if}}
