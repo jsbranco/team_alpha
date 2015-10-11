@@ -18,7 +18,7 @@
 <template name="user">
   <div class="col-sm-4 user-container">
     {{> avatar user=this shape="circle" size="large"}}
-    <a href="user/{{_id}}">{{username}}</a>
+    <a href="user/{{_id}}">{{profile.name}}</a>
     {{#if isFollowingUser _id}}
       <button class="btn btn-success following-button unfollowButton" value="{{_id}}">Following</button>
     {{else}}

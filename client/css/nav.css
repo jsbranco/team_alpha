@@ -1,7 +1,7 @@
 .closeButton {
     background: none;
     border: none;
-    font-size: 30px;
+    font-size: 20px;
     float: right;
     Position: relative;
     Top: -57px;
@@ -13,17 +13,15 @@
     font-weight: 900;
 }
 
-@media (max-width: 468px) {
-    .drawer-hamburger-icon, .drawer-hamburger-icon:before, .drawer-hamburger-icon:after {
-        height: 3px;
-        width: 100%;
-        border-radius: 1px;
-        background-color: #FFF;
-        -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
-        -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
-        transition: all .4s cubic-bezier(.19, 1, .22, 1);
-        border: 1px solid #ABC6F6;
-    }
+.drawer-hamburger-icon, .drawer-hamburger-icon:before, .drawer-hamburger-icon:after {
+    height: 3px;
+    width: 100%;
+    border-radius: 1px;
+    background-color: #FFF;
+    -webkit-transition: all .4s cubic-bezier(.19, 1, .22, 1);
+    -o-transition: all .4s cubic-bezier(.19, 1, .22, 1);
+    transition: all .4s cubic-bezier(.19, 1, .22, 1);
+    border: 1px solid #C1C1C1;
 }
 
 @media (min-width: 768px) {
@@ -40,7 +38,7 @@
     }
 
     .drawer-navbar-default .drawer-brand a {
-        font-size: large;
+        font-size: 17px;
     }
 
     .drawer-menu li a i {
@@ -56,24 +54,29 @@
 @media (max-width: 768px) {
 
     .drawer-menu li {
-        padding: 30px 15px;
-        border-bottom: 3px solid #3C4652;
+        padding: 10px 15px;
+        border-bottom: 2px solid #3C4652;
     }
 
     .drawer-navbar-default .drawer-brand a {
         color: white;
         font-weight: 900;
-        border-bottom: 3px solid #3C4652;
+        border-bottom: 2px solid #3C4652;
     }
 
     .drawer-navbar-default {
         background-color: #2B3541;
     }
 
+    .drawer-navbar-default {
+        background-color: #2B3541;
+        width: 40vw;
+    }
+
     .drawer-menu li a {
         color: #FFFFFF;
         Font-weight: normal;
-        font-size: 24px;
+        font-size: 2.5vh;
     }
 
     .drawer-menu li a i {
