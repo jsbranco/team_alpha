@@ -34,5 +34,6 @@ twbs:bootstrap
 fortawesome:fontawesome
 zimme:iron-router-auth
 josephktcheung:drawer
+jeremy:geocomplete
 ccorcos:transitioner
 email

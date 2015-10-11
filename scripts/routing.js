@@ -29,6 +29,13 @@ Router.route("/bookmarks", {
     }
 });
 
+<<<<<<< HEAD
+Router.route('/addLocation');
+Router.route('/saveLocation');
+Router.route("/home");
+Router.route("/landing");
+=======
+>>>>>>> db394c91fd2eabe82565011851cebfa34fea5cf9
 Router.route("/login", {
     layoutTemplate: "no-layout",
     onAfterAction: function () {

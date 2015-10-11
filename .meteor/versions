@@ -17,7 +17,10 @@ boilerplate-generator@1.0.4
 caching-compiler@1.0.0
 caching-html-compiler@1.0.2
 callback-hook@1.0.4
+<<<<<<< HEAD
+=======
 ccorcos:transitioner@2.0.2
+>>>>>>> db394c91fd2eabe82565011851cebfa34fea5cf9
 check@1.0.6
 coffeescript@1.0.10
 dburles:google-maps@1.1.5
@@ -54,6 +57,7 @@ iron:middleware-stack@1.0.11
 iron:router@1.0.12
 iron:url@1.0.11
 josephktcheung:drawer@2.4.1
+jeremy:geocomplete@1.6.5_7
 jquery@1.11.4
 launch-screen@1.0.4
 less@2.5.0_3
