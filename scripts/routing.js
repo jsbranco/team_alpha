@@ -26,21 +26,16 @@ Router.route("/following", {
   }
 });
 
-Router.route("/bgColor");
-
 Router.route("/bookmarks", {
-    action: function () {
-        this.render("search");
-    },
-    data: function () {
-        return "bookmarks";
-    }
+  action: function () {
+    this.render("search", {
+      data: function() {
+        return Meteor.userId();
+      }
+    });
+  }
 });
 
-Router.route('/addLocation');
-Router.route('/saveLocation');
-Router.route("/home");
-Router.route("/landing");
 Router.route("/login", {
     layoutTemplate: "no-layout",
     onAfterAction: function () {
@@ -92,6 +87,16 @@ Router.route("/search", {
     action: function () {
         Router.go("/");
     }
+});
+
+Router.route("/user/:_id", {
+  action: function() {
+    this.render("search", {
+      data: function() {
+        return this.params._id;
+      }
+    });
+  }
 });
 
 var animateContentOut = function () {
