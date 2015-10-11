@@ -28,7 +28,12 @@ Template.login.onRendered(function () {
 });
 
 Template.login.events({
+    'click .sign-up':function(event)
+    {
+      Router.go("/register")
+    },
     'submit form': function (event, tpl) {
+
         event.preventDefault();
 
         var email = tpl.find("#email").value,
@@ -51,6 +56,7 @@ Template.login.events({
         return false;
     }
 });
+
 
 Template.login.events({
     'click #facebook-login': function (event) {

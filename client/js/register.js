@@ -51,8 +51,7 @@ Template.register.events({
                 email: email,
                 password: password,
                 profile: {
-                    fullName: fullName,
-                    locations: []
+                    name: fullName
                 }
             };
 
