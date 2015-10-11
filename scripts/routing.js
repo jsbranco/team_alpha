@@ -62,13 +62,13 @@ var animateContentOut = function () {
         setTimeout(function () {
             $('.landing-form').removeClass("animated fadeIn");
         },10);
-        this.next()
+        this.next();
     },
     fadeContentIn = function () {
         setTimeout(function () {
             $('.landing-form').addClass("animated fadeIn");
         },10);
-    }
+    };
 // define this as a global onBeforeAction so it happens all the time
-Router.onBeforeAction(animateContentOut)
-Router.onAfterAction(fadeContentIn)
+Router.onBeforeAction(animateContentOut);
+Router.onAfterAction(fadeContentIn);
