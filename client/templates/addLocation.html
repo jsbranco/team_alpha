@@ -1,9 +1,16 @@
 <template name="addLocation">
   <p>{{currentUser.username}}</p>
 
-  {{#each currentUser.profile.locations}}
+  {{#each locations}}
     <p>{{name}}</p>
+    <p>{{address}}</p>
+    <ul>
+    {{#each tags}}
+      <li>{{.}}</li>
+    {{/each}}
+    </ul>
   {{/each}}
 
   <button class="addLocationButton">Add Location</button>
+  <button class="getTripRecommendation">Get Trip Recommendation</button>
 </template>

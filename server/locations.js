@@ -1,3 +1,8 @@
+Locations = new Meteor.Collection("locations");
+Meteor.publish("locations", function() {
+  return Locations.find({userId: Meteor.userId()});
+});
+
 function getLongLatForAddress (address, callback) {
   var result = HTTP.call(
     "GET",
@@ -8,10 +13,14 @@ function getLongLatForAddress (address, callback) {
     }}
   );
 
-  //console.log(result.data.results[0].geometry);
+  console.log(result.data.results[0]);
 
   if (result.data.status == "OK") {
-    callback(null, result.data.results[0].geometry.location);
+    var locationData = {
+      point: result.data.results[0].geometry.location,
+      address: result.data.results[0].formatted_address
+    };
+    callback(null, locationData);
   } else {
     if (result.data.status == "ZERO_RESULTS") {
       callback("There was nothing found for that address.", "failure");
@@ -30,37 +39,62 @@ Meteor.methods({
     check(tags, [String]);
 
     if (!this.userId) {
-      throw new Meteor.Error("not-logged-in", "Must be logged in to add a location.");
+      throw new Meteor.Error("not-logged-in", "You must be logged in to add a location.");
     }
 
     // Grab long & lat and insert location to user's array
-    var point, returnJSON;
+    var point, formattedAddress, returnJSON;
     getLongLatForAddress(address, function(error, location) {
       if(error) {
         throw new Meteor.Error("long-lat-error", error);
       } else {
-        point = location;
+        point = location.point;
+        formattedAddress = location.address;
       }
     });
 
     if (point !== null) {
-      var userLocations = Meteor.user().profile.locations;
-      console.log(userLocations);
+      /*var userLocations = Meteor.user().profile.locations;
       userLocations.push({
         name: name,
-        address: address,
-        longitude: point.lng,
-        latitude: point.lat,
+        address: formattedAddress,
+        loc: {
+          type: "Point",
+          coordinates: [point.lng, point.lat]
+        },
         tags: tags
       });
 
-      Meteor.users.update({_id: this.userId}, {$set: {"profile.locations": userLocations}});
+      Meteor.users.update({_id: this.userId}, {$set: {"profile.locations": userLocations}});*/
+
+      Locations.insert({
+        name: name,
+        address: formattedAddress,
+        loc: {
+          type: "Point",
+          coordinates: [point.lng, point.lat]
+        },
+        tags: tags,
+        userId: this.userId
+      });
 
       returnJSON = {message: "Location added!", status: "success"};
     } else {
-      returnJSON = {message: "An unknown error has occured.....", status: "failure"};
+      throw new Meteor.Error("unknown-error", "An unknown error has occurred.....");
     }
 
+    return returnJSON;
+  },
+  getTripRecommendation: function() {
+    if (!this.userId) {
+      throw new Meteor.Error("not-logged-in", "You must be logged in to get a trip recommendation.");
+    }
+
+    var userLocations = Meteor.user().profile.locations;
+    var numberOfLocations = userLocations.length;
+    var responseMessage = "User has " + numberOfLocations + " locations.";
+
+    var returnJSON = {message: responseMessage, status: "success"};
     return returnJSON;
   }
 });

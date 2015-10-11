@@ -6,8 +6,8 @@ Meteor Hackathon
 ##User
 * email - String
 * password - String
-* firstName - String
-* lastName - String
+* profile.fullName - String
+* profile.locations - Array of locations
 
 ##Location
 * name - String
@@ -41,6 +41,5 @@ Meteor Hackathon
 * tags - String
 
 ###returns
-* status - success / fail - String
-* message - String
-* OR Meteor.Error
+* error? - Meteor.Error
+* result - {message, status}

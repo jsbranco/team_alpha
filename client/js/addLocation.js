@@ -2,16 +2,40 @@ Template.addLocation.events({
   "click .addLocationButton": function() {
     console.log("adding location");
     Meteor.call("addLocation",
-      "Google Inc.",
-      "1600 Amphitheatre Parkway, Mountain View, CA 94043",
-      ["Technology", "Coolness"],
+      "Tim Ho Wan",
+      "9 Fuk Wing St, Hong Kong",
+      ["Food", "Chinese"],
       function(error, result) {
-        if (error) {
+        if(error) {
           console.log(error);
         } else {
           console.log(result);
         }
       }
     );
+  },
+  "click .getTripRecommendation": function() {
+    Meteor.call("getTripRecommendation", function(error, result) {
+      if(error) {
+        console.log(error);
+      } else {
+        console.log(result);
+      }
+    });
+  }
+});
+
+Template.addLocation.helpers({
+  locations: function() {
+    return Locations.find({
+      loc: {
+        $near: {
+          $geometry: {
+            type: "Point",
+            coordinates: [114.1665923, 22.3291652]
+          }
+        }
+      }
+    });
   }
 });
