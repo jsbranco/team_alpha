@@ -1,6 +1,12 @@
 <template name="bookmarks">
   <h1 class="text-center">Bookmarks</h1>
-  {{#each location}}
-    <p>{{name}}</p>
+  {{#each locations}}
+    <div class="row bookmark">
+      <h3>{{name}}</h3>
+      <p>{{address}}</p>
+      {{#each tags}}
+        <span class="bookmark-tag">{{.}}</span>
+      {{/each}}
+    </div>
   {{/each}}
 </template>

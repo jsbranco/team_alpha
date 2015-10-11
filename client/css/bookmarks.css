@@ -1,0 +1,16 @@
+.bookmark {
+  text-align: center;
+
+}
+
+.bookmark:not(:last-child) {
+  border-bottom: 1px solid #CCC;
+  padding-bottom: 30px;
+}
+
+.bookmark-tag {
+  background-color: #6EA4BF;
+  padding: 4px 10px;
+  border-radius: 2px;
+  color: #FFF;
+}
