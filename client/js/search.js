@@ -2,7 +2,7 @@ if (Meteor.isClient) {
     //maps
 
     Meteor.startup(function () {
-        Session.set("focused", undefined);
+        Session.set("focused", undefined)
         GoogleMaps.load({
             key: 'AIzaSyDuzmJjjF_AFYTyUrHb_-eIwsbPAfoUpeA',
             libraries: 'places'  // also accepts an array if you need more than one
@@ -67,7 +67,7 @@ if (Meteor.isClient) {
             //$(".map-container").hide();
             $(".customButtonDiv").hide();
             $("#searchInputDiv").addClass("animate");
-            Session.set("focused", false);
+            Session.set("focused", true);
 
         },
         'blur #searchInput': function () {
