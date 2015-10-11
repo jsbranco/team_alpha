@@ -7,14 +7,14 @@ Meteor Hackathon
 * email - String
 * password - String
 * profile.fullName - String
-* profile.locations - Array of locations
+* username - String
 
 ##Location
-* name - String
 * address - String
-* logitude - Number
-* latitute - Number
+* name - String
+* loc {type: "Point", coordinates: [long, lat]} - Object
 * tags - Array of Strings
+* userId - String
 
 #API
 ##/register

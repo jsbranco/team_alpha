@@ -8,7 +8,8 @@ if (Meteor.isClient) {
   });
 });
 
-  Template.search.helpers({
+  Template.saveLocation.helpers ({
+
   exampleMapOptions: function() {
     // Make sure the maps API has loaded
 
@@ -70,6 +71,22 @@ if (Meteor.isClient) {
 	  		}
 	  	}
 	});
+    // $(".map-container").show();
+        codeAddress();
+
+      }
+  });
+
+
+    Template.saveLocation.events({
+    'click #saveButton': function(){
+        // code goes here
+        console.log("saved!.. lol not really");
+      // get location name, tags and lat/lon
+      $("#locName").val();
+      $("#locTags").val();
+    }
+  });
 
 }
 

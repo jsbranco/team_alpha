@@ -3,6 +3,7 @@ Meteor.publish("locations", function() {
   return Locations.find({userId: Meteor.userId()});
 });
 
+
 function getLongLatForAddress (address, callback) {
   var result = HTTP.call(
     "GET",
