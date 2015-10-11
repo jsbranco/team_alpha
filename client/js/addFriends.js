@@ -18,7 +18,7 @@ Template.addFriends.events({
 Template.addFriends.helpers({
   isFollowingUser: function(userId) {
     console.log(userId);
-    var following = Meteor.user().profile.following;
+    var following = Meteor.user().following;
     if(following.indexOf(userId)) {
       return true;
     } else {
