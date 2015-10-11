@@ -28,9 +28,22 @@ Router.route("/following", {
 
 Router.route("/bookmarks", {
   action: function () {
-    this.render("search", {
+    this.render("bookmarks", {
       data: function() {
-        return Meteor.userId();
+        // Return locations for the logged in user
+        var locations = Locations.find({
+          userId: Meteor.userId(),
+          loc: {
+            $near: {
+              $geometry: {
+                type: "Point",
+                coordinates: [114.1665923, 22.3291652]
+              }
+            }
+          }
+        });
+        console.log(locations.fetch());
+        return locations;
       }
     });
   }
@@ -91,9 +104,22 @@ Router.route("/search", {
 
 Router.route("/user/:_id", {
   action: function() {
-    this.render("search", {
+    this.render("bookmarks", {
       data: function() {
-        return this.params._id;
+        // Return locations for the requested user
+        var locations = Locations.find({
+          userId: this.params._id,
+          loc: {
+            $near: {
+              $geometry: {
+                type: "Point",
+                coordinates: [114.1665923, 22.3291652]
+              }
+            }
+          }
+        });
+        console.log(locations.fetch());
+        return locations;
       }
     });
   }
