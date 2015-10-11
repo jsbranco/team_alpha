@@ -17,6 +17,12 @@ Meteor.methods({
     'validatePassword': validatePassword
 });
 
+Accounts.onCreateUser(function(options, user)
+{
+    console.log("user :", JSON.stringify(user));
+    user.friends = [];
+    return user;
+})
 function sanitizeEmail(email) {
     return email.replace(/\s/g, "");
 }
