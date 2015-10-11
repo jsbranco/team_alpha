@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d72b202-f96c-4c92-b283-075cd2f8487c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.meteor/versions" afterPath="$PROJECT_DIR$/.meteor/versions" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/routing.js" afterPath="$PROJECT_DIR$/scripts/routing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="e1617579-b8bf-4f1b-8003-6e3e11f854d0" name="Ignore" comment="" />
@@ -41,23 +41,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routing.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routing.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/routing.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="1887">
-              <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
-              <folding>
-                <marker date="1444537720377" expanded="true" signature="1256:1634" placeholder="{&quot;name&quot;: &quot;resetPassword&quot;...}" />
-                <marker date="1444537720377" expanded="true" signature="1582:1632" placeholder="{...}" />
-                <marker date="1444537720377" expanded="true" signature="1669:1788" placeholder="{&quot;layoutTemplate&quot;: &quot;no-layout&quot;...}" />
-                <marker date="1444537720377" expanded="true" signature="1735:1786" placeholder="{...}" />
-                <marker date="1444537720377" expanded="true" signature="1816:1875" placeholder="{...}" />
-                <marker date="1444537720377" expanded="true" signature="1842:1873" placeholder="{...}" />
-                <marker date="1444537720377" expanded="true" signature="1915:2055" placeholder="{...}" />
-                <marker date="1444537720377" expanded="true" signature="1948:2022" placeholder="{...}" />
-                <marker date="1444537720377" expanded="true" signature="2089:2205" placeholder="{...}" />
-                <marker date="1444537720377" expanded="true" signature="2122:2193" placeholder="{...}" />
-              </folding>
+            <state vertical-scroll-proportion="0.31870228" vertical-offset="309" max-vertical-offset="1836">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,10 +91,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="versions" pinned="false" current-in-tab="true">
+      <file leaf-file-name="versions" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.meteor/versions">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.749499" vertical-offset="697" max-vertical-offset="1853">
+            <state vertical-scroll-proportion="-14.96" vertical-offset="697" max-vertical-offset="1853">
               <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
               <folding />
             </state>
@@ -166,7 +155,6 @@
         <option value="$PROJECT_DIR$/client/js/register.js" />
         <option value="$PROJECT_DIR$/client/css/landing.css" />
         <option value="$PROJECT_DIR$/client/templates/forgotPassword.html" />
-        <option value="$PROJECT_DIR$/scripts/routing.js" />
         <option value="$PROJECT_DIR$/client/js/forgotPassword.js" />
         <option value="$PROJECT_DIR$/client/templates/login.html" />
         <option value="$PROJECT_DIR$/server/locations.js" />
@@ -174,6 +162,7 @@
         <option value="$PROJECT_DIR$/server/friends.js" />
         <option value="$PROJECT_DIR$/.meteor/packages" />
         <option value="$PROJECT_DIR$/.meteor/versions" />
+        <option value="$PROJECT_DIR$/scripts/routing.js" />
       </list>
     </option>
   </component>
@@ -661,7 +650,7 @@
       <created>1444455770091</created>
       <option name="number" value="Default" />
       <updated>1444455770091</updated>
-      <workItem from="1444455785421" duration="42366000" />
+      <workItem from="1444455785421" duration="42444000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1444459748305</created>
@@ -735,11 +724,17 @@
       <option name="project" value="LOCAL" />
       <updated>1444537757704</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Adding new Meteor.call for adding friends">
+      <created>1444537784845</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1444537784845</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42366000" />
+    <option name="totallyTimeSpent" value="42444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -956,25 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/routing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="991" max-vertical-offset="1887">
-          <caret line="104" column="36" selection-start-line="104" selection-start-column="36" selection-end-line="104" selection-end-column="36" />
-          <folding>
-            <marker date="1444537720377" expanded="true" signature="1256:1634" placeholder="{&quot;name&quot;: &quot;resetPassword&quot;...}" />
-            <marker date="1444537720377" expanded="true" signature="1582:1632" placeholder="{...}" />
-            <marker date="1444537720377" expanded="true" signature="1669:1788" placeholder="{&quot;layoutTemplate&quot;: &quot;no-layout&quot;...}" />
-            <marker date="1444537720377" expanded="true" signature="1735:1786" placeholder="{...}" />
-            <marker date="1444537720377" expanded="true" signature="1816:1875" placeholder="{...}" />
-            <marker date="1444537720377" expanded="true" signature="1842:1873" placeholder="{...}" />
-            <marker date="1444537720377" expanded="true" signature="1915:2055" placeholder="{...}" />
-            <marker date="1444537720377" expanded="true" signature="1948:2022" placeholder="{...}" />
-            <marker date="1444537720377" expanded="true" signature="2089:2205" placeholder="{...}" />
-            <marker date="1444537720377" expanded="true" signature="2122:2193" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/server.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
@@ -1001,8 +977,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.meteor/versions">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.749499" vertical-offset="697" max-vertical-offset="1853">
+        <state vertical-scroll-proportion="-14.96" vertical-offset="697" max-vertical-offset="1853">
           <caret line="63" column="17" selection-start-line="63" selection-start-column="17" selection-end-line="63" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/routing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31870228" vertical-offset="309" max-vertical-offset="1836">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding />
         </state>
       </provider>
