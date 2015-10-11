@@ -1,14 +1,27 @@
-<template name="search">
+
+
+<template name="saveLocation" class="template">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-<div class="container">
-<!-- 	<h1>Search</h1>
- -->
- 	<div class="navbar">
- 		
- 	</div>
-	<div id="searchInputDiv" class="center">
-    	<input id="searchInput" type="text" placeholder="type a location">
-    	<button id="searchButton"><i class="fa fa-search fa-2x"></i></button>
-  	</div>
-</div>
+<!--   <h1>Search</h1>
+ -->  <div id="searchInputDiv" class="center">
+    <input id="searchInput" type="text" placeholder="Search">
+    <button id="searchButton"><i class="fa fa-search fa-3x"></i></button>
+  </div>
+<!--   {{> hello}}
+  {{> saveLocation}} -->
+  </template>
+
+<template name="search">
+  <h1>Search</h1>
+  <input id="searchInput" type="text">
+  <button class="searchButton">Search</button>
+  <button class="saveButton">Save</button>
+  <div class="map-container">
+    {{> googleMap name="exampleMap" options=exampleMapOptions}}
+  </div>
+  <div>
+  	<label>Location Name:</label><input id="locName" type="text">
+  	<label>Tags:</label><input id="locTags" type="text">
+  </div>
+  <button id="saveButton">Save</button>
 </template>

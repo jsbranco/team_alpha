@@ -2,9 +2,9 @@ Template.addLocation.events({
   "click .addLocationButton": function() {
     console.log("adding location");
     Meteor.call("addLocation",
-      "Apple",
-      "1 Infinite Loop Cupertino, CA",
-      ["Technology", "Coolness"],
+      "Tim Ho Wan",
+      "9 Fuk Wing St, Hong Kong",
+      ["Food", "Chinese"],
       function(error, result) {
         if(error) {
           console.log(error);
@@ -20,6 +20,21 @@ Template.addLocation.events({
         console.log(error);
       } else {
         console.log(result);
+      }
+    });
+  }
+});
+
+Template.addLocation.helpers({
+  locations: function() {
+    return Locations.find({
+      loc: {
+        $near: {
+          $geometry: {
+            type: "Point",
+            coordinates: [114.1665923, 22.3291652]
+          }
+        }
       }
     });
   }

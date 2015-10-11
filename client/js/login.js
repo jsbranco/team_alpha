@@ -18,13 +18,17 @@ Template.login.onRendered(function () {
         messages: {
             email: {
                 required: "You must enter an email address."
+            },
+            password:
+            {
+                required:"You must enter a password"
             }
         }
     });
 });
 
 Template.login.events({
-    'submit #loginForm': function (event, tpl) {
+    'submit form': function (event, tpl) {
         event.preventDefault();
 
         var email = tpl.find("#email").value,
