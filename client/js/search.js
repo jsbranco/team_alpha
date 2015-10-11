@@ -8,7 +8,7 @@ if (Meteor.isClient) {
   });
 });
 
-  Template.saveLocation.helpers ({
+  Template.search.helpers ({
 
   exampleMapOptions: function() {
     // Make sure the maps API has loaded
@@ -31,7 +31,7 @@ if (Meteor.isClient) {
   	Template.search.onRendered(function() {
   		this.autorun(function () {
   			if (GoogleMaps.loaded()) {
-  				$("#searchInput").geocomplete();
+  				$("#searchInput").geocomplete({details:"form"});
   			}
   		});
   	});
@@ -45,6 +45,7 @@ if (Meteor.isClient) {
 	    },
 	    "click #saveButton": function() {
 	      // code goes here
+
 	      console.log("saved!.. lol not really");
 
 	      // get location name, tags and lat/lon
@@ -60,20 +61,21 @@ if (Meteor.isClient) {
       'focus #searchInput': function(){
 	  		$(".map-container").hide();
 	  		$(".customButtonDiv").hide();
-	  		$("#searchInputDiv").animate({
-	  			marginTop: '-0.2in'
-	  		});
+	  		$("#searchInputDiv").addClass("animate");
 
 	  	},
+        //'blur #searchInput': function(){
+        //    $(".map-container").show();
+        //    $(".customButtonDiv").show();
+        //    $("#searchInputDiv").removeClass("animate");
+        //
+        //},
 	  	'change #searchInput': function(){
 	  		if ($("#searchInput").val().length > 1) {
 	  			console.log("true");
 	  		}
-    // $(".map-container").show();
-        codeAddress();
-
-      }
-  });
+	  	}
+	});
 
 
     Template.saveLocation.events({
@@ -94,6 +96,10 @@ function codeAddress() {
   var address = $("#searchInput").val();
   console.log("address = " + address);
   geocoder.geocode( { 'address': address}, function(results, status) {
+      $(".pac-item").click(function()
+      {
+
+      });
     if (status == google.maps.GeocoderStatus.OK) {
 
       var myMap = GoogleMaps.maps.exampleMap.instance;
