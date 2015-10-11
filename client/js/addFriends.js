@@ -49,3 +49,21 @@ Template.user.helpers({
     }
   }
 });
+
+Template.bookmarks.helpers({
+  locations: function () {
+    console.log(Meteor.user());
+    /*return Locations.find({
+      userId: Meteor.user()._id,
+      loc: {
+        $near: {
+          $geometry: {
+            type: "Point",
+            coordinates: [114.1665923, 22.3291652]
+          }
+        }
+      }
+    });*/
+    return Session.get("locations");
+  }
+});

@@ -43,6 +43,7 @@ Router.route("/bookmarks", {
           }
         });
         console.log(locations.fetch());
+        Session.set("locations", locations.fetch());
         return locations;
       }
     });
@@ -119,6 +120,7 @@ Router.route("/user/:_id", {
           }
         });
         console.log(locations.fetch());
+        Session.set("locations", locations.fetch());
         return locations;
       }
     });
